@@ -1,0 +1,48 @@
+<div>
+<div class="mai1Container">
+	<input type="text" ng-model="enterText">
+	<input type="button" ng-click="sendMessage(enterText)" value="Send"><br>
+	<br>
+	
+	
+	<div class="feetback-container" ng-repeat="a in arrTask track by $index">
+	    <div class="feedCont-left"></div>
+	    <div class="feedCont-right">
+                     <div ng-show="editStatus">
+		                 <input type="text" ng-model="editedText" class="butChangeText">
+		                 <input type="button" ng-click="sendEditedMessage(editedText)" value="Send" class="butChangeText1"><br>
+	                 </div>
+	        <table>
+	          <tr>
+		        <td><input type="button" ng-click="deleteTask($index)" value="Видалити" class="butDelete"></td>
+		        <td class="feedText">{{a}}</td>
+		        <td class="checksFeed">Ваш відгук: <input type="checkbox" ng-model="checkIt"></td>
+		        <td class="yesNo">
+                    <div ng-show="checkIt"><span class="no">Негативний</span></div>
+                    <div ng-hide="checkIt"><span class="yes">Позитивний</span></div>
+		        </td>
+		         <td><input type="button" ng-click="editTask($index,a)" value="Edit" class="butEdit"></td>
+	         </tr>
+	</table>
+	    </div>
+	    
+	   
+	    
+	    
+	    
+	</div>
+
+	</div>
+<!--
+		<div ng-show="editStatus">
+		<input type="text" ng-model="editedText" class="butChangeText">
+		<input type="button" ng-click="sendEditedMessage(editedText)" value="Send" class="butChangeText1"><br>
+	    </div>
+-->
+	
+	
+	
+	
+		
+	
+</div>

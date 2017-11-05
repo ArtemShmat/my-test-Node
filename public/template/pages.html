@@ -1,0 +1,34 @@
+<div class="cont-2">
+   <div class="container-pages">
+<!--   Сторінка Home-->
+    <div ng-show="home" ng-cloak class="aboutUs">
+        <h1 class="aboutUs-logo">Про нас</h1>
+        <br>
+        <p>Investmant Corporation - це унікальна інвестиційна корпорація, метою якої є інвестування у фінансові активи світу(акції, валюти, облігації, і т.д.) а також інвестування у традиційний бізнес для того щоб дати можливість реалізації усіх можливих ідей.
+        Кредо нашого успіху: завжди будь людиною.</p>
+    </div>
+<!--    Сторінка Blog-->
+    <div ng-show="blog" ng-cloak >
+        <h1 class="blog-news-head">Актуальні поради</h1>
+        <input type="text" ng-model="searchBlock" placeholder="search news">
+        <br><br>
+        <div class="main-pages-block">
+        <div  ng-repeat="a in arr | filter:searchBlock" class="newsBlock" class="blocks">
+            <h2 class="text-align">{{a.title}}</h2>
+            <br>
+            <h3 style="font-size: 14px">{{a.text}}</h3>
+        </div>
+        </div>
+    </div>
+<!--    Сторінка Contact-->
+    <div ng-show="contact" ng-cloak>
+        <h1>Наші контакти</h1>
+    </div>
+    <div ng-show="peopleAboutUs" ng-cloak>
+        <h1>Відгуки про нас</h1>
+         <head-block></head-block>	
+   
+   
+    </div>
+    </div>
+</div>

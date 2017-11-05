@@ -1,0 +1,28 @@
+
+<div>
+	<table>
+		<tr>
+			<td>
+			<form action="">
+				<input type="text" class="search">
+			</form>
+			</td>
+			<td><button class="add">ADD</button></td>
+		</tr>
+		<tr ng-repeat="a in arr">
+			<td><button>{{a.delete}}</button></td>
+			<td><p>{{a.text}}</p></td>
+			<td><input type="checkbox" ng-model="checkIt"></td>
+			<td><p ng-show="checkIt">Do</p></td>
+			<td><p ng-hide="checkIt">No</p></td>
+			<td><button>{{a.edit}}</button></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<input type="text" ng-model="enterText">
+	<input type="button" ng-click="sendMessage" value="Send"><br>
+	<br>
+	
+</div>

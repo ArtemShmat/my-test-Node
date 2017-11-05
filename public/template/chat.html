@@ -1,0 +1,28 @@
+<div class="chat">
+<div class="help-online">Допомога онлайн <input type="checkbox" ng-model="myVar"></div>
+	<div class="chat-main" ng-show="myVar">
+<h3 class="ChatName" ng-init="textHeader='Чим можу Вам допомогти?'">{{textHeader}}</h3>
+<div class="main-dody">
+    <div class="profile">
+        <input type="text" placeholder="Введіть ваше і'мя" ng-model="Name" class="newUser userNameInput">
+        <button ng-click="changeName()" class="EnterNameText changeBut">Змінити</button>
+    </div>
+
+    <div class="chatBody">
+        <ul>
+            <li ng-repeat="x in arrTwit">{{x.date | date: " dd/MM/yyyy/ HH:mm "}}&nbsp;&nbsp;&nbsp;{{x.newUser}}:&nbsp;&nbsp;&nbsp;{{x.textInput}}
+            </li>
+        </ul>
+
+        <p> &nbsp;&nbsp;&nbsp;{{newUser}}&nbsp;&nbsp;&nbsp;{{textInput}} </p>
+    </div>
+
+</div>
+
+<div class="textChat ">
+    <input type="text " placeholder="Enter text here " ng-model="textInput " class="inputText userNameInput">
+    <button ng-click="SendTwit() " class="sendButton changeBut">Send</button>
+</div>
+
+</div>
+</div>

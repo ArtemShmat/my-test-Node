@@ -1,0 +1,10 @@
+<!--навігаційна панель-->
+<div>
+      <div class="main-navigation">
+          <ul class="main-navigation-ul">
+           <li ng-repeat="mb in menuButtons">
+               <a class="menu-href" ng-click="mb.action()">{{mb.name}}</a>
+           </li>
+          </ul>
+      </div>
+</div>

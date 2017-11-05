@@ -1,0 +1,45 @@
+<div>
+    <div class="conteiner-had">
+    <div class="container-had-left"></div>
+    <div class="container-had-center">
+        <p class="container-had-center-text">Investmant Corporation</p>
+    </div>
+    <div class="container-had-right">
+    <p class="avtorisation">Авторизація</p>
+    <div class="container-right-login">Логін:</div>
+    <div class="container-right-pass">Пароль:</div>
+<form class="formLogin" name="myForm" novalidate>
+<input type="text" ng-model="login" name="login" required class="inputs">
+    <input type="text" ng-model="password" required class="inputs">
+    <span style="color: red" ng-show="myForm.login.$touched && myForm.login.$invalid">
+    <span ng-show="myForm.login.$error.required">введіть дані</span></span>
+  <button type="submit" class="button-login" ng-disabled="myForm.$invavid" ng-click="checkUsers()">Вхід</button> 
+</form>
+   </div>
+    </div>
+    
+    
+<!--
+    
+       <input type="text" ng-model="newLoginTest"><br>
+        <input type="text" ng-model="newPasswordTest"><br>
+        <input type="button" value="chenge" ng-click="changePassword()"><br>
+        <input type="button" value="delete" ng-click="deleteUser()"><br>
+        <input type="button" value="registration" ng-click="register()"><br>
+-->
+        
+        <div ng-repeat="a in arrUsers track by $index">
+        	{{a.login}}   {{a.password}}
+        </div>
+         <div class="panel-body" ng-show="enterLogin">
+                            <form role="form">     
+<!--
+                                    <div class="login-box">
+                                        <p class="error">{{userIn}}</p>
+                                    </div>
+-->
+                              
+                            </form>
+                </div>
+</div>
+ 
